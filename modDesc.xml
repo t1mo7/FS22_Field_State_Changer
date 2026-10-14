@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>Timo</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Field State Changer</en>
+        <de>Feldzustand Ändern</de>
+        <nl>Veldstatus Wijzigen</nl>
+    </title>
+    <description>
+        <en><![CDATA[Instantly change the state of a field: plowed, cultivated, stubble tilled, rolled, mulched, limed, fertilized or weeds removed.
+
+Usage: walk onto one of your fields and press ALT + F, then pick a state.
+
+Console (developer console): fscSetField <fieldNumber|here> <state>
+Type fscStates for a list of states.]]></en>
+        <nl><![CDATA[Verander direct de status van een veld: geploegd, gecultiveerd, stoppelbewerkt, gerold, gemulcht, gekalkt, bemest of onkruid verwijderd.
+
+Gebruik: loop op een van je velden en druk op ALT + F, kies dan een status.]]></nl>
+    </description>
+    <iconFilename>icon_fieldStateChanger.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/FieldStateChanger.lua"/>
+    </extraSourceFiles>
+
+    <actions>
+        <action name="FSC_MENU" category="ONFOOT"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="FSC_MENU">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt KEY_f"/>
+        </actionBinding>
+    </inputBinding>
+
+    <l10n>
+        <text name="input_FSC_MENU">
+            <en>Change field state</en>
+            <de>Feldzustand ändern</de>
+            <nl>Veldstatus wijzigen</nl>
+        </text>
+    </l10n>
+</modDesc>
